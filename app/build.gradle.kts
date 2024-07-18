@@ -2,7 +2,7 @@ plugins {
 	alias(libs.plugins.android.application)
 	alias(libs.plugins.jetbrains.kotlin.android)
 	id("kotlin-kapt")
-	//id("dagger.hilt.android.plugin") // Add this line for Dagger Hilt
+	id("dagger.hilt.android.plugin") // Add this line for Dagger Hilt
 }
 
 android {
@@ -74,15 +74,16 @@ dependencies {
 	implementation(libs.converter.gson)
 
 	// Hilt
-//	implementation(libs.hilt.android)
-//	implementation(libs.androidx.hilt.navigation.compose)
-//	kapt(libs.hilt.compiler)
-
-//	implementation(libs.dagger.hilt.android)
-//	kapt(libs.hilt.android.compiler)
+	implementation(libs.androidx.hilt.navigation.compose)
+	implementation(libs.hilt.android)
+	kapt(libs.hilt.compiler)
 
 	// Coil
 	implementation(libs.coil.compose)
+
+	// Pager Content
+	implementation(libs.accompanist.pager)
+	implementation(libs.google.accompanist.pager.indicators)
 
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)

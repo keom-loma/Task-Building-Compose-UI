@@ -1,7 +1,8 @@
 package com.example.composebottomnav
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-//@HiltAndroidApp
+@HiltAndroidApp
 class MyyApp : Application() {
 }

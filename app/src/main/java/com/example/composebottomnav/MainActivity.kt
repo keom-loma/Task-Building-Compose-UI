@@ -37,14 +37,15 @@ import androidx.navigation.compose.rememberNavController
 import com.example.composebottomnav.ui.theme.ComposeBottomNavTheme
 import com.example.composebottomnav.view.navigation.EnumView
 import com.example.composebottomnav.view.navigation.NavigationBase
+import dagger.hilt.android.AndroidEntryPoint
 
-//@AndroidEntryPoint
+
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		enableEdgeToEdge()
 		setContent {
-			// val viewModel = HiltViewModel()
 			ComposeBottomNavTheme {
 				Surface(modifier = Modifier.fillMaxSize()) {
 					NavigationBase()
