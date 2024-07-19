@@ -76,6 +76,7 @@ dependencies {
 	// Hilt
 	implementation(libs.androidx.hilt.navigation.compose)
 	implementation(libs.hilt.android)
+	implementation(libs.androidx.runtime.livedata)
 	kapt(libs.hilt.compiler)
 
 	// Coil
@@ -84,6 +85,14 @@ dependencies {
 	// Pager Content
 	implementation(libs.accompanist.pager)
 	implementation(libs.google.accompanist.pager.indicators)
+
+	// Shared prefs,
+	implementation(libs.androidx.datastore.preferences)
+	// Room components
+	implementation(libs.androidx.room.runtime)
+	kapt(libs.androidx.room.compiler)
+	implementation(libs.androidx.room.ktx)
+
 
 	testImplementation(libs.junit)
 	androidTestImplementation(libs.androidx.junit)
